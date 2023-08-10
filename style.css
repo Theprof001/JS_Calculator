@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+#calculator, #numbers div, #operators div {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+body {
+    background-color: #1F1F1F;
+    color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1 );
+    width: 500px;
+    margin: 0 auto;
+}
+
+#keys {
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    justify-content: center;
+}
+
+#operators {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#numbers div,
+#operators div {
+    background-color: #AEFF00;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: -1px -1px 4px rgba(0,0,0,0.6) inset;
+    transition: all 0.2s ease-in-out;
+}
+
+#numbers div:hover,
+#operators div:hover {
+    background-color: #8BC34A;
+    transform: scale(1.1);
+}
+
+#numbers div:active,
+#operators div:active {
+    background-color: #689F38;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.6) inset;
+    transform: scale(0.9);
+    transition: all 0.1s ease-in-out;
+}
+
+#screen {
+    margin: 18px;
+    width: calc(100% - 30px);
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.6) inset;
+    background-color: rgba(239, 239, 239, 0.774);
+    display: flex;
+    animation: fadeIn 1s;
+}
+
+#result,
+#operator {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 42px;
+    text-align: right;
+    border: none;
+}
+
+#operator {
+    width: 15%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
